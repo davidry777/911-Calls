@@ -15,3 +15,7 @@ print(df.head())
 print(df['zip'].value_counts().head(5))
 # Analyzing the top 5 townships for 911 calls
 print(df['twp'].value_counts().head(5))
+# Analyzing the amount of unique title codes
+print(df['title'].nunique())
+
+
