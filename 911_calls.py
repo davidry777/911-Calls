@@ -10,3 +10,8 @@ df = pd.read_csv('911.csv')
 print(df.info())
 # Checking the head of the data file
 print(df.head())
+
+# Analyzing the top 5 zipcodes for 911 calls
+print(df['zip'].value_counts().head(5))
+# Analyzing the top 5 townships for 911 calls
+print(df['twp'].value_counts().head(5))
