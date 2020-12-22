@@ -18,4 +18,7 @@ print(df['twp'].value_counts().head(5))
 # Analyzing the amount of unique title codes
 print(df['title'].nunique())
 
-
+# Creating a new column called Reason using lambda
+df['Reason'] = df['title'].apply(lambda title: title.split(':')[0])
+# Analyzing most common reasons for 911 call
+print(df['Reason'].value_counts())
