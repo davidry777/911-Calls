@@ -42,3 +42,7 @@ df['Day of Week'] = df['Day of Week'].map(dmap)
 # Creating a countplot for the Day of Week column with hue based on Reason
 sns.countplot(x='Day of Week', data=df, hue='Reason')
 plt.show()
+
+# Creating a countplot for the Month column with hue based on Reason
+sns.countplot(x='Month', data=df, hue='Reason')
+plt.show()
