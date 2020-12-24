@@ -16,7 +16,7 @@ The data we will be using are [Emergency 911 Calls](https://www.kaggle.com/mchir
 *Top 5 townships for 911 calls:*
 ![Top 5 townships](https://github.com/davidry777/911-Calls/blob/master/images/charts/Screen%20Shot%202020-12-24%20at%2012.28.16%20PM.png)
 
-*Unique Reasons for 911 calls*
+*Unique Reasons for 911 calls:*
 ![Reasons](https://github.com/davidry777/911-Calls/blob/master/images/charts/Screen%20Shot%202020-12-24%20at%2012.28.33%20PM.png)
 
 *Count plot of 911 calls by Reason*
