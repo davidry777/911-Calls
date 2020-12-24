@@ -90,3 +90,15 @@ plt.show()
 plt.figure(figsize=(12,6))
 sns.clustermap(data=hourPerDay, cmap='coolwarm')
 plt.show()
+
+# Creating a heatmap plot using the new monthPerDay DataFrame
+monthPerDay = df.groupby(by=['Day of Week','Month']).count()['Reason'].unstack()
+monthPerDay.head()
+plt.figure(figsize=(12,6))
+sns.heatmap(monthPerDay,cmap='coolwarm')
+plt.show()
+
+# Creating a clustermap plot using the monthPerDay Dataframe
+plt.figure(figsize=(12,6))
+sns.clustermap(data=monthPerDay, cmap='coolwarm')
+plt.show()
