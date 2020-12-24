@@ -64,18 +64,24 @@ plt.tight_layout()
 plt.show()
 
 # Creating three separate plots based on Reason
-df[df['Reason'] == 'Traffic'].groupby('Date').count()['twp'].plot()
-plt.title('Traffic')
-plt.tight_layout()
-
 df[df['Reason'] == 'EMS'].groupby('Date').count()['twp'].plot()
 plt.title('EMS')
 plt.tight_layout()
+plt.show()
 
 df[df['Reason'] == 'Traffic'].groupby('Date').count()['twp'].plot()
 plt.title('Traffic')
 plt.tight_layout()
+plt.show()
 
 df[df['Reason'] == 'Fire'].groupby('Date').count()['twp'].plot()
 plt.title('Fire')
 plt.tight_layout()
+plt.show()
+
+# Creating a heatmap plot using the new hourPerDay DataFrame
+hourPerDay = df.groupby(by=['Day of Week','Hour']).count()['Reason'].unstack()
+hourPerDay.head()
+plt.figure(figsize=(12,6))
+sns.heatmap(data=hourPerDay, cmap='coolwarm')
+plt.show()
