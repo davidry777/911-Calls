@@ -81,7 +81,7 @@ plt.show()
 
 # Creating a heatmap plot using the new hourPerDay DataFrame
 hourPerDay = df.groupby(by=['Day of Week','Hour']).count()['Reason'].unstack()
-hourPerDay.head()
+print(hourPerDay.head())
 plt.figure(figsize=(12,6))
 sns.heatmap(data=hourPerDay, cmap='coolwarm')
 plt.show()
@@ -93,7 +93,7 @@ plt.show()
 
 # Creating a heatmap plot using the new monthPerDay DataFrame
 monthPerDay = df.groupby(by=['Day of Week','Month']).count()['Reason'].unstack()
-monthPerDay.head()
+print(monthPerDay.head())
 plt.figure(figsize=(12,6))
 sns.heatmap(monthPerDay,cmap='coolwarm')
 plt.show()
