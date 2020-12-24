@@ -56,3 +56,9 @@ plt.show()
 # Creating a lmplot on the number of calls per month
 sns.lmplot(x='Month', y='twp', data=byMonth.reset_index())
 plt.show()
+
+# Creating Date column and making a plot on 911 calls based on Date
+df['Date'] = df['timeStamp'].apply(lambda c: c.date())
+df.groupby('Date').count()['twp'].plot()
+plt.tight_layout()
+plt.show()
