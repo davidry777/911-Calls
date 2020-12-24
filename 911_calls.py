@@ -85,3 +85,8 @@ hourPerDay.head()
 plt.figure(figsize=(12,6))
 sns.heatmap(data=hourPerDay, cmap='coolwarm')
 plt.show()
+
+# Creating a clustermap plot using the hourPerDay Dataframe
+plt.figure(figsize=(12,6))
+sns.clustermap(data=hourPerDay, cmap='coolwarm')
+plt.show()
