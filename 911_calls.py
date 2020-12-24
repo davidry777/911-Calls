@@ -62,3 +62,20 @@ df['Date'] = df['timeStamp'].apply(lambda c: c.date())
 df.groupby('Date').count()['twp'].plot()
 plt.tight_layout()
 plt.show()
+
+# Creating three separate plots based on Reason
+df[df['Reason'] == 'Traffic'].groupby('Date').count()['twp'].plot()
+plt.title('Traffic')
+plt.tight_layout()
+
+df[df['Reason'] == 'EMS'].groupby('Date').count()['twp'].plot()
+plt.title('EMS')
+plt.tight_layout()
+
+df[df['Reason'] == 'Traffic'].groupby('Date').count()['twp'].plot()
+plt.title('Traffic')
+plt.tight_layout()
+
+df[df['Reason'] == 'Fire'].groupby('Date').count()['twp'].plot()
+plt.title('Fire')
+plt.tight_layout()
