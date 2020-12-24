@@ -51,3 +51,8 @@ plt.show()
 byMonth = df.groupby('Month').count()
 print(byMonth.head())
 byMonth['twp'].plot()
+plt.show()
+
+# Creating a lmplot on the number of calls per month
+sns.lmplot(x='Month', y='twp', data=byMonth.reset_index())
+plt.show()
