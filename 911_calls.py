@@ -46,3 +46,8 @@ plt.show()
 # Creating a countplot for the Month column with hue based on Reason
 sns.countplot(x='Month', data=df, hue='Reason')
 plt.show()
+
+# Creating a groupby object called byMonth, and creating a plot indicating the count of calls per month
+byMonth = df.groupby('Month').count()
+print(byMonth.head())
+byMonth['twp'].plot()
